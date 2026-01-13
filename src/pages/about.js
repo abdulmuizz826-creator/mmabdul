@@ -1,5 +1,6 @@
 import SectionTitle from '../components/SectionTitle';
 import { MessageCircle, Twitter, Globe, Award, Users } from 'lucide-react';
+import Image from 'next/image';
 
 export default function About() {
   const stats = [

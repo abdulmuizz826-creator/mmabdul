@@ -5,7 +5,7 @@ import { Mail, Phone, MapPin, Send, CheckCircle } from 'lucide-react';
 
 export default function Contact() {
   const [formStatus, setFormStatus] = useState('idle'); // idle, submitting, success
-  const address = "NNDC Building, Kaduna, Nigeria";
+  const address = "Victoria Island, Lagos, Nigeria";
   
   // Encoded URL for Google Maps Embed
   const mapUrl = `https://www.google.com/maps/embed/v1/place?key=YOUR_API_KEY&q=${encodeURIComponent(address)}`;
@@ -82,7 +82,7 @@ export default function Contact() {
             </div>
           </div>
 
-          
+          {/* RIGHT COLUMN: Contact Form */}
           <Card>
             <h3 className="text-2xl font-bold text-slate-900 dark:text-white mb-6">Send a Message</h3>
             <form onSubmit={handleSubmit} className="space-y-6">
