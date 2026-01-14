@@ -37,8 +37,8 @@ const skillsData = [
 
 export default function Skills() {
   return (
-    <div className="min-h-screen py-24 px-4 bg-white dark:bg-slate-950">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen pt-40 pb-24 px-4 bg-white dark:bg-slate-950">
+    <div className="max-w-7xl mx-auto">
         <SectionTitle subtitle="Technical expertise honed over a decade of practice in high-stakes infrastructure environments.">
           Professional Skills
         </SectionTitle>

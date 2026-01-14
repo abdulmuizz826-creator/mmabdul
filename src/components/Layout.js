@@ -3,10 +3,9 @@ import Footer from './Footer';
 
 export default function Layout({ children }) {
   return (
-    <div className="bg-white dark:bg-slate-950 min-h-screen">
+    <div className="bg-white dark:bg-slate-950 min-h-screen font-sans text-slate-900 dark:text-slate-100">
       <Navbar />
-      {/* Adding the padding here fixes it for ALL pages at once */}
-      <main className="pt-32"> 
+      <main>
         {children}
       </main>
       <Footer />

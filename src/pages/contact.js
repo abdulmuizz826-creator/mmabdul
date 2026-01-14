@@ -42,8 +42,8 @@ export default function Contact() {
   };
 
   return (
-    <div className="min-h-screen py-24 px-4 bg-white dark:bg-slate-950">
-      <div className="max-w-7xl mx-auto">
+   <div className="min-h-screen pt-40 pb-24 px-4 bg-white dark:bg-slate-950">
+    <div className="max-w-7xl mx-auto">
         <SectionTitle subtitle="Get in touch for consultations or project inquiries.">
           Contact Us
         </SectionTitle>

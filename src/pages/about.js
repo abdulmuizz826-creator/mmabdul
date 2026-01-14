@@ -10,27 +10,37 @@ export default function About() {
   ];
 
   return (
-    <div className="min-h-screen py-24 px-4 bg-slate-50 dark:bg-slate-900">
-      <div className="max-w-7xl mx-auto">
+    <div className="min-h-screen pt-40 pb-24 px-4 bg-white dark:bg-slate-950">
+    <div className="max-w-7xl mx-auto">
         <SectionTitle subtitle="Meet the visionary behind the architecture.">
           About The CEO
         </SectionTitle>
         
         <div className="flex flex-col lg:flex-row gap-12 items-center">
-          {/* Profile Image Simulation */}
+          {/* Profile Image Container */}
           <div className="w-full lg:w-1/3">
-            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl bg-gradient-to-br from-slate-200 to-slate-300 dark:from-slate-700 dark:to-slate-800 flex items-center justify-center group">
-              <div className="absolute inset-0 bg-cyan-600 mix-blend-overlay opacity-20 group-hover:opacity-0 transition-opacity"></div>
-              {/* Generic SVG avatar */}
-              <svg className="w-48 h-48 text-slate-400" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
-              </svg>
+            <div className="relative aspect-square rounded-2xl overflow-hidden shadow-2xl bg-slate-200 dark:bg-slate-800 group">
+              <Image 
+                src="/ceo.jpg" 
+                alt="Muhammad Abdulmuizz"
+                fill
+                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                className="object-cover group-hover:scale-105 transition-transform duration-500"
+                priority
+              />
+              {/* Branding Overlay */}
+              <div className="absolute inset-0 bg-cyan-600 mix-blend-overlay opacity-20 group-hover:opacity-0 transition-opacity pointer-events-none"></div>
             </div>
           </div>
 
+          {/* Bio Content */}
           <div className="w-full lg:w-2/3">
-            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">Muhammad Abdulmuizz</h3>
-            <p className="text-cyan-600 font-semibold text-lg mb-6">CEO & Lead Network Architect</p>
+            <h3 className="text-3xl font-bold text-slate-900 dark:text-white mb-2">
+              Muhammad Abdulmuizz
+            </h3>
+            <p className="text-cyan-600 font-semibold text-lg mb-6">
+              CEO & Lead Network Architect
+            </p>
             
             <div className="prose dark:prose-invert max-w-none text-slate-600 dark:text-slate-300 space-y-4">
               <p className="text-lg leading-relaxed">
@@ -46,13 +56,13 @@ export default function About() {
               </p>
             </div>
 
-            
+            {/* Social Actions */}
             <div className="mt-8 flex flex-wrap gap-4">
               <a 
                 href="https://wa.me/2347066566079" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors"
+                className="flex items-center gap-2 px-6 py-3 bg-green-600 text-white rounded-lg font-medium hover:bg-green-700 transition-colors shadow-lg"
               >
                 <MessageCircle className="w-5 h-5" /> WhatsApp
               </a>
@@ -60,19 +70,23 @@ export default function About() {
                 href="https://x.com/lilmuizz" 
                 target="_blank" 
                 rel="noopener noreferrer"
-                className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg font-medium hover:opacity-80 transition-opacity"
+                className="flex items-center gap-2 px-6 py-3 bg-black text-white rounded-lg font-medium hover:opacity-80 transition-opacity shadow-lg"
               >
                 <Twitter className="w-5 h-5" /> Follow on X
               </a>
             </div>
 
-            
+            {/* Stats Grid */}
             <div className="grid grid-cols-3 gap-4 mt-10 pt-10 border-t border-slate-200 dark:border-slate-800">
               {stats.map((stat, i) => (
-                <div key={i} className="text-center">
-                  <stat.icon className="w-6 h-6 mx-auto mb-2 text-cyan-500" />
-                  <div className="text-sm font-bold text-slate-900 dark:text-white">{stat.label}</div>
-                  <div className="text-xs text-slate-500">{stat.value}</div>
+                <div key={i} className="text-center group">
+                  <stat.icon className="w-6 h-6 mx-auto mb-2 text-cyan-500 group-hover:scale-110 transition-transform" />
+                  <div className="text-sm font-bold text-slate-900 dark:text-white">
+                    {stat.label}
+                  </div>
+                  <div className="text-xs text-slate-500">
+                    {stat.value}
+                  </div>
                 </div>
               ))}
             </div>
